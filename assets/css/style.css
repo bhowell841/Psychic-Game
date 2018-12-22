@@ -1,0 +1,30 @@
+body {
+    text-align: center;
+    line-height: 200%;
+    background-image: url();
+}
+
+.jumbotron {
+    border: solid 2px #ccc
+}
+
+
+div {
+    margin: 50px;
+}
+
+.container {
+    border: solid 2px #ccc;
+}
+
+#guesses {
+    line-height: 15px;
+    padding: 10px;
+    margin: 5px;
+}
+
+/* .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+} */
