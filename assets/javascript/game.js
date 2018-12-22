@@ -34,8 +34,9 @@ document.onkeypress = function(event){
     else {
         guessLeft = guessLeft-1;
         console.log("guesses remaining: " + guessLeft);   // This is showing it
-        document.querySelector("#guessesLeft").innerHtml = guessLeft;  // This is not showing
-    };
+        //document.querySelector("#thoughts").innerHtml = guessLeft;  // This is not showing
+        document.getElementById("thoughts").innerHTML = guessLeft;
+    }
 
 // If the counter gets to 0 add a loss
     if (guessLeft === 0){
