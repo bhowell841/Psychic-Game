@@ -1,11 +1,12 @@
 body {
     text-align: center;
     line-height: 200%;
-    background-image: url();
+    background-image: url(../images/christmas-dark.png)
 }
 
 .jumbotron {
     border: solid 2px #ccc
+    //https://i.etsystatic.com/18917999/d/il/a7121e/1733090473/il_340x270.1733090473_908h.jpg?version=0
 }
 
 
@@ -23,8 +24,20 @@ div {
     margin: 5px;
 }
 
-/* .clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
-} */
+#guessesLeft {
+    line-height: 15px;
+    padding: 10px;
+    margin: 5px;
+}
+
+#winCount {
+    line-height: 15px;
+    padding: 10px;
+    margin: 5px;
+}
+
+#losses {
+    line-height: 15px;
+    padding: 10px;
+    margin: 5px;
+}

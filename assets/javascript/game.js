@@ -6,40 +6,72 @@ var wins = 0;
 var losses = 0;
 var guess;
 var guessLeft = 7;
-
+var letter;
+var used = [];
 
 // Get a random number
-var random = Math.floor(Math.random() * alphabet.length);
-var letter = alphabet[random]
-console.log(random);
-console.log(letter);
+function getLetter(){
+    var random = Math.floor(Math.random() * alphabet.length);
+    letter = alphabet[random]
+    console.log(random);
+    console.log(letter);
+    return (letter);
+}
 
+getLetter();
 
 document.onkeypress = function(event){
     guess = event.key.toLowerCase();
-    console.log("The guess is: " + guess);
-    document.querySelector("#guesses").innerHTML = guess;
+        compare(guess);
+    
 
 // Compare the guess to the random letter, if match wins +1
     if (guess.charAt(0) === letter){
-        wins = wins+1;
-        alert("You win! " + guess.toUpperCase() + " was the letter.");
-        document.querySelector("#winCount").innerHTML = wins;
+        winGame();
         }
 
 // If no match subtract one from guess
     else {
         guessLeft = guessLeft-1;
-        console.log("guesses remaining: " + guessLeft);
-        document.querySelector("#guessesLeft").innerHtml = guessLeft;
+        console.log("guesses remaining: " + guessLeft);   // This is showing it
+        document.querySelector("#guessesLeft").innerHtml = guessLeft;  // This is not showing
     };
-
 
 // If the counter gets to 0 add a loss
     if (guessLeft === 0){
-         losses = losses+1;
-        alert("Too many guesses. " + guess.toUpperCase() + " was the letter.  You lose.");
-        console.log("Losses " + losses);
-        document.querySelector("#losses").innerHTML = losses;
+        loseGame();
     }
+}
+
+function compare(item) {
+    if (used.includes(item) === true){
+        guessLeft = guessLeft+1;
+    }else {
+        used.push(item)
+    }
+    console.log("The guess is: " + item);
+    console.log(used);
+    document.querySelector("#guesses").innerHTML = " " + used.join(', ')
+}
+
+function winGame() {
+    wins = wins+1;
+    alert("You win! " + guess.toUpperCase() + " was the letter.");
+    document.querySelector("#winCount").innerHTML = wins;
+    reset();
+}
+
+function loseGame() {
+    losses = losses+1;
+    alert("Too many guesses. " + guess.toUpperCase() + " was the letter.  You lose.");
+    console.log("Losses " + losses);
+    document.querySelector("#losses").innerHTML = losses;
+    reset();
+}
+
+function reset() {
+    guess;
+    guessLeft = 7;
+    getLetter();
+    used = [];
 }
