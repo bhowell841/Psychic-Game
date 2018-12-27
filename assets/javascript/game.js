@@ -24,7 +24,9 @@ document.onkeypress = function(event){
     guess = event.key.toLowerCase();
         compare(guess);
     
+    
 
+    
 // Compare the guess to the random letter, if match wins +1
     if (guess.charAt(0) === letter){
         winGame();
@@ -64,7 +66,7 @@ function winGame() {
 
 function loseGame() {
     losses = losses+1;
-    alert("Too many guesses. " + guess.toUpperCase() + " was the letter.  You lose.");
+    alert("Too many guesses. " + letter.toUpperCase() + " was the letter.  You lose.");
     console.log("Losses " + losses);
     document.querySelector("#losses").innerHTML = losses;
     reset();

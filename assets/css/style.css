@@ -1,21 +1,33 @@
 body {
     text-align: center;
     line-height: 200%;
-    background-image: url(../images/christmas-dark.png)
+    background-image: url(../images/christmas-dark.png);
 }
 
 .jumbotron {
-    border: solid 2px #ccc
-    //https://i.etsystatic.com/18917999/d/il/a7121e/1733090473/il_340x270.1733090473_908h.jpg?version=0
+    border: solid 2px #ccc;
+
 }
 
+h1, p {
+    background-color: #ccc;
+    width: 350px;
+    margin: auto;
+    border: solid 1px black;
+}
+
+p {
+    border-top: none;
+}
 
 div {
     margin: 50px;
 }
 
 .container {
-    border: solid 2px #ccc;
+    border: solid 2px black;
+    /* background-image: url(../images/ouija.jpg); */
+
 }
 
 #guesses {
