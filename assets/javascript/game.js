@@ -60,6 +60,7 @@ function compare(item) {
 function winGame() {
     wins = wins+1;
     alert("You win! " + guess.toUpperCase() + " was the letter.");
+    alert("Guess a letter to start a new round.")
     document.querySelector("#winCount").innerHTML = wins;
     reset();
 }
@@ -67,6 +68,7 @@ function winGame() {
 function loseGame() {
     losses = losses+1;
     alert("Too many guesses. " + letter.toUpperCase() + " was the letter.  You lose.");
+    alert("Guess a letter to start a new round.")
     console.log("Losses " + losses);
     document.querySelector("#losses").innerHTML = losses;
     reset();

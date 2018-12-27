@@ -10,15 +10,15 @@ body {
 }
 
 h1, p {
-    background-color: #ccc;
+    background-color: #ffffff;
     width: 350px;
     margin: auto;
-    border: solid 1px black;
+    border-left: solid 2px black;
+    border-right: solid 2px black;
+    
 }
 
-p {
-    border-top: none;
-}
+
 
 div {
     margin: 50px;
@@ -30,6 +30,9 @@ div {
 
 }
 
+.main {
+    background-color: #ffffff;
+}
 #guesses {
     line-height: 15px;
     padding: 10px;
